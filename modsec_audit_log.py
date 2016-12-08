@@ -1,10 +1,13 @@
 #!/usr/bin/python2.5
 #encoding: utf-8
+#Date: 2009-03-27
+
 import re
 import MySQLdb
 fr = open('/etc/modsecurity/logs/modsec_audit (copy).log')
 fw = open('/home/bukokoro/fw.txt', 'w')
 count= 0
+
 #-----------------------Regular Express-----------------------
 #match secA string
 secA_regex = re.compile(r'^[[0-9]*/[A-Za-z]*/[0-9]*:[0-9]*:[0-9]*:[0-9]*.*')
