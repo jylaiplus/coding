@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # Copyright (c) 2014 Adafruit Industries
 # DHT22 data upload to ThingSpeak (DHT22 from Tony DiCola)
+# Use Raspberry Pi 2 Model B NOOBS_v1_4_1 @ 2015-10-07
 # more info https://jylaiplus.gitbooks.io/lesson-1-for-your-pi/content/demo.html
 
 import sys
