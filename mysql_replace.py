@@ -21,7 +21,7 @@ try:
 	cursor = db.cursor()
 
 	## query
-	query = ("SELECT pid, truename, schoolid, schoolno, password FROM master")
+	query = ("SELECT column_name(s) FROM master")
 	cursor.execute(query)
 
 	### write to fw5 file
@@ -111,14 +111,14 @@ if flag_mysql == 1 :
 				schoolname = schoolid
 			
 			try:
-				insertstmt = ("REPLACE INTO mlcstudent (pid, truename, schoolid, schoolno, mainwork, username, password) \
+				insertstmt = ("REPLACE INTO mlcstudent (column_name(s)) \
 					VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')" \
-					% (pid, truename, schoolid, schoolno, mainwork, username, password))
+					% (column_name(s)))
 				cursor.execute(insertstmt)
-				need_update_success.extend([(pid, truename, schoolid, schoolname, schoolno, password)])
+				need_update_success.extend([(column_name(s))])
 				db.commit()
 			except:
-				need_update_fail.extend([(pid, truename, schoolid, schoolname, schoolno, password)])
+				need_update_fail.extend([(column_name(s))])
 			db.rollback()
 		db.close()
 
