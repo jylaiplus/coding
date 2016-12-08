@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # Copyright (c) 2014 Adafruit Industries
 # DHT22 data upload to ThingSpeak (DHT22 from Tony DiCola)
+# more info https://jylaiplus.gitbooks.io/lesson-1-for-your-pi/content/demo.html
 
 import sys
 import Adafruit_DHT
